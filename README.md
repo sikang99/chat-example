@@ -2,6 +2,9 @@
 chatting example using gorilla websocket
 
 
+### History
+- [How to Use Websockets in Golang: Best Tools and Step-by-Step Guide](https://yalantis.com/blog/how-to-build-websockets-in-go/)
+
 ### Information
 
 
@@ -22,5 +25,5 @@ chatting example using gorilla websocket
 
 
 
-### History
+### Changlog
 - 2020/02/24 : start to coding with a [chat example](https://github.com/gorilla/websocket/files/465536/chat1.zip)
