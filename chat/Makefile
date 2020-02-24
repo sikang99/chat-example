@@ -8,10 +8,10 @@ usage:
 edit e:
 	@echo "> make (edit) [client|server]"
 
-edit-client bc:
+edit-client ec:
 	vi client/client.go
 
-edit-server bs:
+edit-server es:
 	vi server/server.go
 ##--------------------------------------------------------------
 build b:
@@ -30,10 +30,10 @@ build-server bs:
 run r:
 	@echo "> make (run) [client|server]"
 
-run-client bc:
+run-client rc:
 	cd client; ./client
 
-run-server bs:
+run-server rs:
 	cd server; ./server
 ##--------------------------------------------------------------
 clean:
