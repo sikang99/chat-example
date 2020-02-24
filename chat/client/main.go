@@ -16,6 +16,10 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
+
 var addr = flag.String("addr", "localhost:9200", "http service address")
 
 func main() {
@@ -26,7 +30,7 @@ func main() {
 	URL := "wss://127.0.0.1:9200/ws"
 	u, err := url.Parse(URL)
 	if err != nil {
-		fmt.Println(err.Error())
+		log.Println(err.Error())
 		return
 	}
 	//	rawConn, err := net.Dial("tcp", u.Host)
