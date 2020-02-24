@@ -1,8 +1,10 @@
 
 
 
-gencert/gencert
-chat/client/client
-chat/server/server
+gochat/gencert/gencert
+gochat/client/client
+gochat/server/server
 
+simple/client/client
+simple/server/server
 
