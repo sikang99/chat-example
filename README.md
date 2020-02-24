@@ -18,6 +18,8 @@ chatting example using gorilla websocket
 - [stinkyfingers/chat](https://github.com/stinkyfingers/chat) - A simple chat application example in Go using WebSocket
 - [waylau/goChat](https://github.com/waylau/goChat) - Golang chat.This example application shows how to use WebSockets
 - [tyrchen/chatroom](https://github.com/tyrchen/chatroom) - very simple chatroom for learning goroutine and channel
+- [domluna/websocket-golang-chat](https://github.com/domluna/websocket-golang-chat) - Simple chat using golang and websockets
+
 
 
 ### History
