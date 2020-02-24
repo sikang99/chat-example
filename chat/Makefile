@@ -9,10 +9,10 @@ edit e:
 	@echo "> make (edit) [client|server]"
 
 edit-client ec:
-	vi client/client.go
+	vi client/main.go
 
 edit-server es:
-	vi server/server.go
+	vi server/main.go
 ##--------------------------------------------------------------
 build b:
 	@echo "> make (build) [client|server|all]"
