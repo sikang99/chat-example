@@ -12,6 +12,10 @@ import (
 	"text/template"
 )
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
+
 var addr = flag.String("addr", ":9200", "http service address")
 var homeTempl = template.Must(template.ParseFiles("home.html"))
 
@@ -41,14 +45,14 @@ func main() {
 	//	}
 	var httpErr error
 
-	if _, err := os.Stat("./cert/cert.pem"); err == nil {
-		log.Println("file ", "cert.pem found. use https")
+	if _, err := os.Stat("cert/cert.pem"); err == nil {
+		log.Println("file", "cert.pem is found. use https")
 		httpErr = http.ListenAndServeTLS(*addr, "cert/cert.pem", "cert/key.pem", nil)
 		if httpErr != nil {
 			log.Fatal("The process exited with https error: ", httpErr.Error())
 		}
 	} else {
-		log.Println("file ", "cert.pem not found. use https")
+		log.Println("file", "cert.pem not found. use https")
 		httpErr = http.ListenAndServe(*addr, nil)
 		if httpErr != nil {
 			log.Fatal("The process exited with http error: ", httpErr.Error())

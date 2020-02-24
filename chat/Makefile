@@ -31,13 +31,41 @@ run r:
 	@echo "> make (run) [client|server]"
 
 run-client rc:
-	cd client; ./client
+	client/client
 
 run-server rs:
-	cd server; ./server
+	server/server
 ##--------------------------------------------------------------
 clean:
 	rm -f client server
+
+open-web ow:
+	open https://localhost:9200
+##--------------------------------------------------------------
+DOMAIN=cojam.tv
+cert-copy cc:
+	@echo "> make (cert-copy) [local|public]"
+
+cert-install-local cil:
+	brew install mkcert
+
+cert-copy-local ccl:
+	mkcert -install
+	mkcert localhost 127.0.0.1
+	mv localhost+1.pem cert/cert.pem
+	mv localhost+1-key.pem cert/key.pem
+	ls -al cert/
+
+cert-install-public cip:
+	sudo apt-get install -y certbot
+
+cert-copy-public ccp:
+	sudo cp /etc/letsencrypt/live/$(DOMAIN)/cert.pem cert/cert.pem
+	sudo cp /etc/letsencrypt/live/$(DOMAIN)/privkey.pem cert/key.pem
+	sudo certbot renew --dry-run
+
+cert-check:
+	openssl s_client -showcerts -connect $(DOMAIN):4439
 ##--------------------------------------------------------------
 git update gu:
 	cd ..; make gu
