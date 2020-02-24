@@ -9,6 +9,10 @@ import (
 	"golang.org/x/net/websocket"
 )
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
+
 type Message struct {
 	Text string `json:"text"`
 }

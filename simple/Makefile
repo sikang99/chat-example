@@ -36,6 +36,15 @@ run-client rc:
 run-server rs:
 	server/server
 ##--------------------------------------------------------------
+kill k:
+	@echo "> make (kill) [client|server]"
+
+kill-client kc:
+	pkill client
+
+kill-server ks:
+	pkill server
+##--------------------------------------------------------------
 clean:
 	rm -f client server
 
