@@ -15,3 +15,11 @@ You can download the package dependencies by switching to the `niltalk` director
 - Have a Redis instance running
 - Configure the necessary values in `config.json`
 - Execute `./run` in the `niltalk` directory in your GOPATH (You may have to set the permission to 755 by doing `chmod 755 ./run`)
+
+
+
+### Information
+- [redis-cli, the Redis command line interface](https://redis.io/topics/rediscli)
+- [medis]()
+- Docker Hub: [redis](https://hub.docker.com/_/redis/)
+

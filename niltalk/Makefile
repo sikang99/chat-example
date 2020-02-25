@@ -10,6 +10,7 @@ BASE=$(ORG)/$(NAME)
 BUILD=$(VERSION).0
 IMAGE=$(BASE):$(BUILD)-$(DIST)
 COMPOSE=docker-compose.yml
+IPADDR=localhost
 .PHONY: usage set bak
 # -------------------------------------------------------------------------------
 usage:
@@ -29,9 +30,11 @@ recover:
 	cp bak/Dockerfile.$(BUILD)-$(DIST) Dockerfile
 
 build b:
-	go build -o $(NAME) src/*.go
+	cd src && go build -o $(NAME) *.go
+run r:
+	cd src && ./$(NAME)
 clean:
-	rm -f $(NAME)
+	rm -f src/$(NAME)
 # -------------------------------------------------------------------------------
 docker d:
 	@echo "> make (docker) [edit|build|run|exec:x|ps|kill|push:u|clean]"
@@ -40,7 +43,7 @@ docker-edit de:
 	vi Dockerfile
 
 docker-build db:
-	docker build -t $(IMAGE) --build-arg VERSION=$(VERSION) .
+	docker build -t $(IMAGE) .
 
 docker-push du:
 	docker push $(IMAGE)
@@ -100,8 +103,15 @@ compose-ps cp:
 
 compose-logs cl:
 	docker-compose -f $(COMPOSE) logs
+
+compose-restart cx:
+	make compose-down
+	make compose-up
+
+compose-restart-niltalk crn:
+	docker-compose -f $(COMPOSE) restart niltalk
 # -------------------------------------------------------------------------------
-DOMAIN=origin.cojam.shop
+DOMAIN=chat.cojam
 cert-copy cc:
 	@echo "> make (cert-copy) [local|public]"
 
@@ -126,6 +136,9 @@ cert-copy-public ccp:
 cert-check:
 	openssl s_client -showcerts -connect $(DOMAIN):4439
 # -------------------------------------------------------------------------------
+redis:
+	redis-cli -u redis://127.0.0.1:6379 ping
+
 open o:
 	@echo "> make (open) [web]"
 

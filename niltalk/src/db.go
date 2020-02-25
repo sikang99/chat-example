@@ -7,6 +7,7 @@ package main
 
 import (
 	"errors"
+	"log"
 	"time"
 
 	"github.com/garyburd/redigo/redis"
@@ -28,6 +29,7 @@ func NewDBpool(address string, password string, active int, idle int) *DBpool {
 		Dial: func() (redis.Conn, error) {
 			c, err := redis.DialTimeout("tcp", address, time.Duration(5)*time.Second, time.Duration(5)*time.Second, time.Duration(5)*time.Second)
 			if err != nil {
+				log.Println(err)
 				return nil, err
 			}
 			if password != "" {

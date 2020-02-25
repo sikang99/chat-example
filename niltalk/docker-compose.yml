@@ -18,7 +18,7 @@ services:
         ports:
             - 4000:4000
         volumes:
-            - ./conf/niltalk/config.json:/app/config.json
+            #- ./conf/niltalk/config.json:/app/config.json
             - ./log/niltalk:/var/log/niltalk
         networks:
             - backend

@@ -33,6 +33,8 @@ var (
 )
 
 func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+
 	// Load configuration from file.
 	configFile := flag.String("config", "config.json", "Configuration file")
 
