@@ -48,12 +48,12 @@ docker-push du:
 docker-run dr:
 	docker run -d \
 		-v $(PWD)/cert:/etc/ssl/cert \
-		-v $(PWD)/log/janus:/var/log/janus \
+		-v $(PWD)/log/$(NAME):/var/log/$(NAME) \
 		--name $(NAME) $(IMAGE)
 
 docker-run-base drb:
 	docker run -d \
-		-v $(PWD)/log/janus:/var/log/janus \
+		-v $(PWD)/log/$(NAME):/var/log/$(NAME) \
 		--name $(NAME) $(IMAGE)
 
 docker-restart-exec drx:
@@ -127,24 +127,10 @@ cert-check:
 	openssl s_client -showcerts -connect $(DOMAIN):4439
 # -------------------------------------------------------------------------------
 open o:
-	@echo "> make (open) [admin|web|demo|janus|github]"
-
-open-admin oa:
-	curl -X POST http://$(IPADDR):7088/admin -d '{"janus": "list_sessions"}'
+	@echo "> make (open) [web]"
 
 open-web ow:
-	curl -X POST https://$(IPADDR):8089/janus -d '{"transaction": "ciao", "janus": "ping"}' 
-
-#hopen demos
-#simplehttpserver -port=8080 -dir=demos
-open-demo od:
-	open http://$(IPADDR):9090
-
-open-janus oj:
-	open https://janus.conf.meetecho.com/index.html
-
-open-github og:
-	open https://github.com/meetecho/janus-gateway
+	open http://$(IPADDR):4000
 # -------------------------------------------------------------------------------
 git-update gu:
 	cd ..; make gu

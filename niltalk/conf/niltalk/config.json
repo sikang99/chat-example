@@ -6,7 +6,7 @@
 	"room_route": "/r/",
 
 	// redis cache server
-	"cache_address": "127.0.0.1:6379",
+	"cache_address": "redis:6379",
 	"cache_pool_active": 100,
 	"cache_pool_idle": 80,
 	"cache_prefix_room": "room:",

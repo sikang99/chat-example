@@ -5,14 +5,23 @@ services:
         image: cojam/redis:5.0.5.0-alpine-3.10
         container_name: redis
         ports:
-            - 443:443
+            - 6379:6379
         volumes:
             - ./cert:/etc/ssl/cert
             - ./conf/redis/redis.conf:/etc/redis/redis.conf
             - ./log/redis:/var/log/redis
+        networks:
+            - backend
     niltalk:
         image: cojam/niltalk:0.0.0.0-alpine-3.10
         container_name: niltalk
+        ports:
+            - 4000:4000
+        volumes:
+            - ./conf/niltalk/config.json:/app/config.json
+            - ./log/niltalk:/var/log/niltalk
+        networks:
+            - backend
         depends_on:
             - redis
 

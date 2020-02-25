@@ -1,0 +1,23 @@
+FROM cojam/golang:1.13.8.0-alpine-3.10
+MAINTAINER "Stoney Kang <sikang99@gmail.com>"
+##==========================================================================
+ENV GO111MODULE=on
+RUN mkdir /app
+COPY src/* /app/
+RUN cd /app \
+    && go build -o niltalk *.go
+##--------------------------------------------------------------------------
+
+
+
+##==========================================================================
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+##==========================================================================
+
+
+
+
+
+
