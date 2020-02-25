@@ -79,7 +79,7 @@ docker-logs dl:
 
 #	docker container rm $(docker container ls -aq)
 docker-clean dc:
-	rm -rf log/*
+	rm -rf log/redis/* log/niltalk/*
 
 docker-clobber clobber:
 	docker container prune --force
