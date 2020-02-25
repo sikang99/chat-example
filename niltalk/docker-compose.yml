@@ -17,7 +17,7 @@ services:
         image: cojam/niltalk:0.0.0.0-alpine-3.10
         container_name: niltalk
         ports:
-            - 4000:4000
+            - 4008:4008
         volumes:
             - ./conf/niltalk/config.json:/app/config.json
             - ./log/niltalk:/var/log/niltalk
