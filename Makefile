@@ -6,8 +6,10 @@
 usage:
 	@echo "usage: make [git]"
 #----------------------------------------------------------------------------------
-src-search ss:
+src-search-go ssg:
 	hub-search --lang=go "chat"
+src-search-js ssj:
+	hub-search --lang=js "chat"
 #----------------------------------------------------------------------------------
 git g:
 	@echo "> make (git:g) [update|store]"
