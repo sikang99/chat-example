@@ -67,5 +67,9 @@ cert-copy-public ccp:
 cert-check:
 	openssl s_client -showcerts -connect $(DOMAIN):4439
 ##--------------------------------------------------------------
+src-search ss:
+	hub-search --lang=go "chat"
+
 git update gu:
 	cd ..; make gu
+##--------------------------------------------------------------

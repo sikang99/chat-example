@@ -12,6 +12,10 @@ import (
 	"golang.org/x/net/websocket"
 )
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
+
 type Message struct {
 	Text string `json:"text"`
 }
@@ -36,7 +40,7 @@ func main() {
 		for {
 			err := websocket.JSON.Receive(ws, &m)
 			if err != nil {
-				fmt.Println("Error receiving message: ", err.Error())
+				log.Println("Error receiving message: ", err.Error())
 				break
 			}
 			fmt.Println("Message: ", m)
@@ -55,7 +59,7 @@ func main() {
 		}
 		err = websocket.JSON.Send(ws, m)
 		if err != nil {
-			fmt.Println("Error sending message: ", err.Error())
+			log.Println("Error sending message: ", err.Error())
 			break
 		}
 	}

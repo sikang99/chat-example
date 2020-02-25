@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"net/http"
 
@@ -104,7 +103,7 @@ func (h *hub) broadcastMessage(m Message) {
 	for _, conn := range h.clients {
 		err := websocket.JSON.Send(conn, m)
 		if err != nil {
-			fmt.Println("Error broadcasting message: ", err)
+			log.Println("Error broadcasting message: ", err)
 			return
 		}
 	}
