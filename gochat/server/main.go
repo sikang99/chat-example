@@ -16,7 +16,7 @@ func init() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 }
 
-var addr = flag.String("addr", ":9200", "http service address")
+var addr = flag.String("addr", ":4000", "http service address")
 var homeTempl = template.Must(template.ParseFiles("home.html"))
 
 func serveHome(w http.ResponseWriter, r *http.Request) {

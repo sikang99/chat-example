@@ -20,7 +20,7 @@ func init() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 }
 
-var addr = flag.String("addr", "localhost:9200", "http service address")
+var addr = flag.String("addr", "localhost:4000", "http service address")
 
 func main() {
 

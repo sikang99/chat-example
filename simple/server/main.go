@@ -24,7 +24,7 @@ type hub struct {
 }
 
 var (
-	port = flag.String("port", "9000", "port used for ws connection")
+	port = flag.String("port", "4000", "port used for ws connection")
 )
 
 func main() {
