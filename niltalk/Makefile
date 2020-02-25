@@ -139,8 +139,12 @@ cery-copy-renew ccr:
 cert-check:
 	openssl s_client -showcerts -connect $(DOMAIN):4439
 # -------------------------------------------------------------------------------
-redis:
+redis-check rc:
+	@echo "> make (redis-check) [local|chat]"
+redis-check-local rcl:
 	redis-cli -u redis://127.0.0.1:6379 ping
+redis-check-chat rcc:
+	redis-cli -u redis://chat.cojam.shop:6379 ping
 
 open o:
 	@echo "> make (open) [web]"
