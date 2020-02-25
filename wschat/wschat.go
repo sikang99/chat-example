@@ -1,11 +1,13 @@
 package main
 
 import (
-	"code.google.com/p/go.net/websocket"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
+
+	//"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 )
 
 const (
