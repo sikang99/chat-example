@@ -14,7 +14,8 @@ build b:
 run r:
 	go run --race $(PROG).go
 
-
+clean:
+	rm -f $(PROG)
 
 
 git-update gu:
