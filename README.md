@@ -8,8 +8,9 @@ chatting example using gorilla websocket
 ### Information
 
 
-### Open Source
+### Open Source (Product)
 - [gorilla/websocket](https://github.com/gorilla/websocket) - A fast, well-tested and widely used WebSocket implementation for Go.
+    - [chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
 - [**LockGit/gochat**](https://github.com/LockGit/gochat) - goim, online chat, im server write by golang
 - [**tinode/chat**](https://github.com/tinode/chat) - Instant messaging server; backend in Go; iOS, Android, web, command line clients; chatbots
 - [oikomi/FishChatServer](https://github.com/oikomi/FishChatServer) - FishChatServer
