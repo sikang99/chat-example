@@ -3,7 +3,7 @@
 #
 PROG=websockets
 usage:
-	@echo "usage: make [edit|buil|run]"
+	@echo "usage: make [edit|buil|run|open]"
 
 edit e:
 	vi $(PROG).go
@@ -17,6 +17,8 @@ run r:
 clean:
 	rm -f $(PROG)
 
+open o:
+	open http://localhost:4000/
 
 git-update gu:
 	cd ../..; make gu
