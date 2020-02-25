@@ -3,12 +3,12 @@ MAINTAINER "Stoney Kang <sikang99@gmail.com>"
 ##==========================================================================
 ENV GO111MODULE=on
 RUN mkdir /app
-COPY src/* /app/
+ADD src/ /app/
 RUN cd /app \
     && go build -o niltalk *.go
 ##--------------------------------------------------------------------------
-
-
+RUN ls -alF /app
+WORKDIR /app
 
 ##==========================================================================
 COPY entrypoint.sh /entrypoint.sh

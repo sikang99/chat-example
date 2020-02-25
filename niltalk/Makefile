@@ -7,7 +7,7 @@ NAME=niltalk
 VERSION=0.0.0
 DIST=alpine-3.10
 BASE=$(ORG)/$(NAME)
-BUILD=$(VERSION).0
+BUILD=$(VERSION).1
 IMAGE=$(BASE):$(BUILD)-$(DIST)
 COMPOSE=docker-compose.yml
 IPADDR=localhost
@@ -127,10 +127,13 @@ cert-copy-local ccl:
 
 cert-install-public cip:
 	sudo apt-get install -y certbot
+	sudo certbot --standalone -d ${DOMAIN} certonly
 
 cert-copy-public ccp:
 	sudo cp /etc/letsencrypt/live/$(DOMAIN)/cert.pem cert/cert.pem
 	sudo cp /etc/letsencrypt/live/$(DOMAIN)/privkey.pem cert/key.pem	
+
+cery-copy-renew ccr:
 	sudo certbot renew --dry-run
 
 cert-check:
@@ -143,7 +146,7 @@ open o:
 	@echo "> make (open) [web]"
 
 open-web ow:
-	open http://$(IPADDR):4000
+	open http://$(IPADDR):4008
 # -------------------------------------------------------------------------------
 git-update gu:
 	cd ..; make gu

@@ -20,6 +20,8 @@ You can download the package dependencies by switching to the `niltalk` director
 
 ### Information
 - [redis-cli, the Redis command line interface](https://redis.io/topics/rediscli)
-- [medis]()
+- [luin/medis](https://github.com/luin/medis)
 - Docker Hub: [redis](https://hub.docker.com/_/redis/)
+
+
 

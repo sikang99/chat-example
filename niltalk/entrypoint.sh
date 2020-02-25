@@ -1,5 +1,6 @@
 #! /bin/sh
 
-cd /app && ./niltalk
+cd /app
+./niltalk
 
 tail -f /dev/null
