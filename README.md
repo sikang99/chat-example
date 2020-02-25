@@ -45,4 +45,5 @@ chatting examples using websockets (gorilla & base), written in go
 ### Changlog
 - 2020/02/25 : test some more examples
     - change `code.google.com/p/go.net/websocket` into `golang/go/x/websocket`
+    - use port=4000 in all examples
 - 2020/02/24 : start to coding with a [chat example](https://github.com/gorilla/websocket/files/465536/chat1.zip)
