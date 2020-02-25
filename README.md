@@ -1,5 +1,5 @@
 # chat-example
-chatting example using gorilla websocket
+chatting examples using websockets (gorilla & base)
 
 
 ### History
