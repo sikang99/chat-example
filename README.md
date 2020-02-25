@@ -3,6 +3,8 @@ chatting examples using websockets (gorilla & base)
 
 
 ### History
+- 2019/07/10 [Building a live chat with Go, NATS, Redis and Websockets](https://www.ribice.ba/goch/)
+- 2019/03/14 [Go Websocket Tutorial](https://tutorialedge.net/golang/go-websocket-tutorial/)
 - [How to Use Websockets in Golang: Best Tools and Step-by-Step Guide](https://yalantis.com/blog/how-to-build-websockets-in-go/)
 - 2017/08/02 [**A Million WebSockets and Go**](https://www.freecodecamp.org/news/million-websockets-and-go-cc58418460bb/)
 - 2016/12/20 [Build a Realtime Chat Server With Go and WebSockets](https://scotch.io/bar-talk/build-a-realtime-chat-server-with-go-and-websockets)
