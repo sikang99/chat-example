@@ -5,7 +5,9 @@ chatting examples using websockets (gorilla & base)
 ### History
 - [How to Use Websockets in Golang: Best Tools and Step-by-Step Guide](https://yalantis.com/blog/how-to-build-websockets-in-go/)
 
+
 ### Information
+- [Go Web Examples: [Websockets](https://gowebexamples.com/websockets/)
 
 
 ### Open Source (Product)
