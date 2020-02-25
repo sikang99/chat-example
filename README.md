@@ -28,6 +28,7 @@ chatting examples using websockets (gorilla & base), written in go
 - [oikomi/FishChatServer2](https://github.com/oikomi/FishChatServer2) - FishChatServer2
 - [coyim/coyim](https://github.com/coyim/coyim) - coyim - a safe and secure chat client, XMPP
 - [**keybase/client**](https://github.com/keybase/client) - Keybase Go Library, Client, Service, OS X, iOS, Android, Electron
+- [knadh/niltalk](https://github.com/knadh/niltalk) - A multi-room disposable chat service written in Go that uses WebSockets for live communication
 
 
 ### Open Source (Examples)
