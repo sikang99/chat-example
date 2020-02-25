@@ -18,6 +18,7 @@ chatting example using gorilla websocket
 - [coyim/coyim](https://github.com/coyim/coyim) - coyim - a safe and secure chat client, XMPP
 - [**keybase/client**](https://github.com/keybase/client) - Keybase Go Library, Client, Service, OS X, iOS, Android, Electron
 
+
 ### Open Source (Examples)
 - [stinkyfingers/chat](https://github.com/stinkyfingers/chat) - A simple chat application example in Go using WebSocket
 - [waylau/goChat](https://github.com/waylau/goChat) - Golang chat.This example application shows how to use WebSockets
@@ -28,5 +29,5 @@ chatting example using gorilla websocket
 
 ### Changlog
 - 2020/02/25 : test some more examples
-    - change "code.google.com/p/go.net/websocket" into "golang/go/x/websocket"
+    - change `code.google.com/p/go.net/websocket` into `golang/go/x/websocket`
 - 2020/02/24 : start to coding with a [chat example](https://github.com/gorilla/websocket/files/465536/chat1.zip)
