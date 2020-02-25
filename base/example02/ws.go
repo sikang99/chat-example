@@ -3,10 +3,15 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 
 	"github.com/gorilla/websocket"
 )
+
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
 
 type msg struct {
 	Num int
@@ -22,7 +27,7 @@ func main() {
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	content, err := ioutil.ReadFile("index.html")
 	if err != nil {
-		fmt.Println("Could not open file.", err)
+		log.Println("Could not open file.", err)
 	}
 	fmt.Fprintf(w, "%s", content)
 }
@@ -46,13 +51,14 @@ func echo(conn *websocket.Conn) {
 
 		err := conn.ReadJSON(&m)
 		if err != nil {
-			fmt.Println("Error reading json.", err)
+			log.Println("Error reading json.", err)
+			return
 		}
 
 		fmt.Printf("Got message: %#v\n", m)
 
 		if err = conn.WriteJSON(m); err != nil {
-			fmt.Println(err)
+			log.Println(err)
 		}
 	}
 }

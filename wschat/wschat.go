@@ -10,6 +10,10 @@ import (
 	"golang.org/x/net/websocket"
 )
 
+func init() {
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
+
 const (
 	listenAddr = "localhost:4000" // server address
 )
