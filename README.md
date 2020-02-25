@@ -8,7 +8,8 @@ chatting examples using websockets (gorilla & base)
 
 ### Information
 - [Go Web Examples: [Websockets](https://gowebexamples.com/websockets/)
-
+- [WebSocket을 이용하여 클라이언트 애플리케이션 작성하기](https://developer.mozilla.org/ko/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Golang과 websocket을 활용한 서버 프로그래밍 (장애 없는 서버 런칭 도전기)](https://aidanbae.github.io/gallery/golang-meetup/])
 
 ### Open Source (Product)
 - [gorilla/websocket](https://github.com/gorilla/websocket) - A fast, well-tested and widely used WebSocket implementation for Go.
