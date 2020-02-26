@@ -35,6 +35,7 @@ ecc:
 
 bak:
 	cp Dockerfile bak/Dockerfile.$(BUILD)-$(DIST)
+	cp $(COMPOSE) bak/compose.$(BUILD)-$(DIST)
 recover:
 	cp bak/Dockerfile.$(BUILD)-$(DIST) Dockerfile
 

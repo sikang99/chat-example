@@ -6,7 +6,8 @@ ENV CGO_ENABLED=0
 RUN mkdir /app
 ADD src/ /app/
 RUN cd /app \
-    && go build -o niltalk *.go
+    && go build -o niltalk *.go \
+    && rm -f *.go
 ##--------------------------------------------------------------------------
 WORKDIR /app
 ##==========================================================================
