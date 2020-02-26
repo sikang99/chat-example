@@ -3,24 +3,23 @@ version: '3'
 services:
     redis:  # CAUTION: docker error!!
         #image: cojam/redis:5.0.5.1-alpine-3.10
-        image: redis:5.0.7-alpine3.10
-        #image: redis:latest
+        image: cojam/redis:4.0.9.0-ubuntu-18.04
         container_name: redis
-        #ports:
-            #- 6379:6379
+        ports:
+            - 6379:6379
         volumes:
-            - ./cert:/etc/ssl/cert
-            #- ./conf/redis/redis.conf:/etc/redis/redis.conf
+            #- ./cert:/etc/ssl/cert
+            - ./conf/redis/redis.conf:/etc/redis/redis.conf
             - ./log/redis:/var/log/redis
         networks:
             - backend
     niltalk:
-        image: cojam/niltalk:0.0.0.0-alpine-3.10
+        image: cojam/niltalk:0.0.0.1-alpine-3.10
         container_name: niltalk
         ports:
             - 4008:4008
         volumes:
-            - ./conf/niltalk/config.json:/app/config.json
+            #- ./conf/niltalk/config.json:/app/config.json
             - ./log/niltalk:/var/log/niltalk
         networks:
             - backend

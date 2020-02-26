@@ -23,6 +23,9 @@ edit-entry ee:
 	vi entrypoint.sh
 edit-make em:
 	vi dist/alpine/Makefile.root
+erc:
+	vi conf/redis/redis.conf
+
 
 bak:
 	cp Dockerfile bak/Dockerfile.$(BUILD)-$(DIST)
