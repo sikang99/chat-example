@@ -8,7 +8,6 @@ services:
         #ports:
             #- 6379:6379
         volumes:
-            #- ./cert:/etc/ssl/cert
             - ./conf/redis/redis.conf:/etc/redis/redis.conf
             - ./log/redis:/var/log/redis
         networks:
@@ -16,8 +15,8 @@ services:
     niltalk:
         image: cojam/niltalk:0.0.0.1-alpine-3.10
         container_name: niltalk
-        ports:
-            - 4008:4008
+        #ports:
+            #- 4008:4008
         volumes:
             #- ./conf/niltalk/config.json:/app/config.json
             - ./log/niltalk:/var/log/niltalk

@@ -23,9 +23,15 @@ edit-entry ee:
 	vi entrypoint.sh
 edit-make em:
 	vi dist/alpine/Makefile.root
-erc:
-	vi conf/redis/redis.conf
 
+edit-config ec:
+	@echo "> make (edit-config) [redis|niltalk|caddy]"
+ecr:
+	vi conf/redis/redis.conf
+ecn:
+	vi conf/niltalk/config.json
+ecc:
+	vi conf/caddy/Caddyfile
 
 bak:
 	cp Dockerfile bak/Dockerfile.$(BUILD)-$(DIST)
@@ -38,6 +44,9 @@ run r:
 	cd src && ./$(NAME)
 clean:
 	rm -f src/$(NAME)
+
+logs l:
+	tail -f log/redis/* log/niltalk/* log/caddy/*
 # -------------------------------------------------------------------------------
 docker d:
 	@echo "> make (docker) [edit|build|run|exec:x|ps|kill|push:u|clean]"
