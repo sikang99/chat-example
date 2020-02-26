@@ -24,4 +24,5 @@ You can download the package dependencies by switching to the `niltalk` director
 - Docker Hub: [redis](https://hub.docker.com/_/redis/)
 
 
-
+### Changelogs
+- 2020/02/27 : niltalk is working with redis, caddy
