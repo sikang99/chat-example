@@ -1,0 +1,25 @@
+## --- Base web servers
+http://localhost:80 {
+    root /var/www/html
+    ext .html .htm .php
+    log /var/log/caddy/access.log
+    errors /var/log/caddy/error.log
+}
+
+https://localhost:443 {
+    root /var/www/html
+    ext .html .htm .php
+    tls /etc/ssl/cert/cert.pem /etc/ssl/cert/key.pem
+    log /var/log/caddy/access.log
+    errors /var/log/caddy/error.log
+}
+
+## --- Reverse proxy servers for Janus
+https://localhost:4009 {
+    tls /etc/ssl/cert/cert.pem /etc/ssl/cert/key.pem
+    proxy / http://niltalk:4008 {
+        fail_timeout 300s
+        transparent
+        header_upstream X-Forwarded-Ssl on
+    }
+}

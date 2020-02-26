@@ -153,7 +153,8 @@ open o:
 	@echo "> make (open) [web]"
 
 open-web ow:
-	open http://$(IPADDR):4008
+	open https://$(IPADDR):4009
+	#open http://$(IPADDR):4008
 # -------------------------------------------------------------------------------
 git-update gu:
 	cd ..; make gu
