@@ -38,12 +38,14 @@ chatting examples using websockets (gorilla & base), written in go
 - [domluna/websocket-golang-chat](https://github.com/domluna/websocket-golang-chat) - Simple chat using golang and websockets
 - [campoy/chat](https://github.com/campoy/chat) - A good demonstration of Go composition of types and processes.
 
+
 ### Open Source (WebSockets Examples)
 - [aidanbae/websocket-example](https://github.com/aidanbae/websocket-example) - 2018, 7월 고랭 코리아 밋업 발표자료
 
 
-
-### Changlog
+### Changelogs
+- 2020/02/26 : niltalk working
+    - redis docker problem : connection error
 - 2020/02/25 : test some more examples
     - change `code.google.com/p/go.net/websocket` into `golang/go/x/websocket`
     - use port=4000 in all examples
