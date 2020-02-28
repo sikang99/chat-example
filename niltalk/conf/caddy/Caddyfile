@@ -14,14 +14,21 @@
 #    errors /var/log/caddy/error.log
 #}
 
-## --- Reverse proxy servers for Janus
+## --- Reverse proxy servers for niltalk
+http://localhost:4008 {
+    proxy / niltalk:4008
+    proxy /w niltalk:4008 {
+        websocket
+        transparent
+    }
+}
+
 https://localhost:4009 {
     tls /etc/ssl/cert/cert.pem /etc/ssl/cert/key.pem
-    proxy / http://niltalk:4008 {
-        fail_timeout 300s
+    proxy / niltalk:4008
+    proxy /w niltalk:4008 {
+        websocket
         transparent
-        header_upstream X-Forwarded-Ssl on
     }
-    log /var/log/caddy/access.log
     errors /var/log/caddy/error.log
 }

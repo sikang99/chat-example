@@ -92,7 +92,7 @@ docker-logs dl:
 
 #	docker container rm $(docker container ls -aq)
 docker-clean dc:
-	rm -rf log/redis/* log/niltalk/*
+	rm -rf log/redis/* log/niltalk/* log/caddy/*
 
 docker-clobber clobber:
 	docker container prune --force
@@ -115,11 +115,10 @@ compose-ps cp:
 	docker-compose -f $(COMPOSE) ps
 
 compose-logs cl:
-	docker-compose -f $(COMPOSE) logs
+	docker-compose -f $(COMPOSE) logs -f
 
 compose-restart cx:
-	make compose-down
-	make compose-up
+	docker-compose -f $(COMPOSE) restart
 
 compose-restart-niltalk crn:
 	docker-compose -f $(COMPOSE) restart niltalk
@@ -152,6 +151,9 @@ cery-copy-renew ccr:
 cert-check:
 	openssl s_client -showcerts -connect $(DOMAIN):4439
 # -------------------------------------------------------------------------------
+tcpproxy:
+	tcpproxy -lcert cert/cert.pem  -lkey cert/key.pem -lhost :4009 -rhost :4008
+
 redis-check rc:
 	@echo "> make (redis-check) [local|chat]"
 redis-check-local rcl:
@@ -164,7 +166,7 @@ open o:
 
 open-web ow:
 	open https://$(IPADDR):4009
-	#open http://$(IPADDR):4008
+	open http://$(IPADDR):4008
 # -------------------------------------------------------------------------------
 git-update gu:
 	cd ..; make gu

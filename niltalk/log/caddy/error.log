@@ -1,0 +1,14 @@
+2020/02/28 02:06:15 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:15 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:22 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:23 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:24 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:24 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:24 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:06:25 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:20:40 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:20:40 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:20:50 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:20:50 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:30:48 [ERROR 502 /] dial tcp 192.168.208.2:4008: connect: connection refused
+2020/02/28 02:30:49 [ERROR 502 /favicon.ico] dial tcp 192.168.208.2:4008: connect: connection refused

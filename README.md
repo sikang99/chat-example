@@ -3,6 +3,7 @@ chatting examples using websockets (gorilla & base), written in go
 
 
 ### History
+- 2019/11/16 [Overview of WebSocket support in Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-websocket)
 - 2019/07/10 [Building a live chat with Go, NATS, Redis and Websockets](https://www.ribice.ba/goch/)
 - 2019/03/14 [Go Websocket Tutorial](https://tutorialedge.net/golang/go-websocket-tutorial/)
 - [How to Use Websockets in Golang: Best Tools and Step-by-Step Guide](https://yalantis.com/blog/how-to-build-websockets-in-go/)
