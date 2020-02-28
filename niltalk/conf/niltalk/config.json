@@ -1,7 +1,8 @@
 {
 	// websocket server
 	"address": "0.0.0.0:4008",
-	"url": "http://localhost:4008", // no trailing slash
+	//"url": "http://localhost:4008", // no trailing slash
+	"url": "https://localhost:4009", // no trailing slash
 	"websocket_route": "/w/",
 	"room_route": "/r/",
 

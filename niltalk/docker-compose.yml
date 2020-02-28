@@ -28,7 +28,7 @@ services:
         image: cojam/caddy:1.0.4.1-alpine-3.10
         container_name: caddy
         ports:
-            - 4008:4008
+            #- 4008:4008
             - 4009:4009
         volumes:
             - ./conf/caddy/Caddyfile:/etc/Caddyfile
